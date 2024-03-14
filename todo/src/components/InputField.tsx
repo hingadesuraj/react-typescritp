@@ -5,10 +5,10 @@ interface Props{
   setTodo:React.Dispatch<React.SetStateAction<string | number>>;
 }
 
-const InputField:React.FC  = ({todo,setTodo}:Props) => {
+const InputField:React.FC<Props>  = ({todo,setTodo}:Props) => {
   return (
     <div style={{display:"flex",font:"40px",padding:"10px"}}>
-        <input style={{font:"40px",padding:"10px",borderRadius:"20px",outline:"none"}} type="text" placeholder='Enter Text Here' />
+        <input style={{font:"40px",padding:"10px",borderRadius:"20px",outline:"none"}} type="text" placeholder='Enter Text Here' value={todo} onChange={(e)=>setTodo(e.target.value)} />
         <button  style={{font:"40px",padding:"10px",borderRadius:"20px"}} >Go</button>
     </div>
   )

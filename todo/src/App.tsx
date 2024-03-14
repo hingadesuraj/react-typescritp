@@ -7,6 +7,8 @@ const App:React.FC =()=> {
   // create state using typescript type
   const [todo,setTodo] = useState<string|number>("")
 
+  console.log(todo);
+
   return (
     <>
       
