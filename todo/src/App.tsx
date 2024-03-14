@@ -9,16 +9,28 @@ function App() {
   // let students:string[]
 
   // object type
-  type Person = {
-    name:string,
-    age?:number  // age property is optationl due to question mark
-  }
+  // type Person = {
+  //   name:string,
+  //   age?:number  // age property is optationl due to question mark
+  // }
 
 
-  let person : Person{
-    name:"Suraj",
-    age:21
+  // let person : Person{
+  //   name:"Suraj",
+  //   age:21
+  // }
+
+
+  // array of object type
+  // let lotsOfPeople = Person[]
+
+  // function in typescript
+  function printName(name : string){
+    console.log(name)
   }
+
+  printName("suraj");
+
 
 
   return (
