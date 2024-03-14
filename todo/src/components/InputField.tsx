@@ -2,7 +2,7 @@ import React from 'react'
 
 interface Props{
   todo:string;
-  setTodo:React.Dispatch<React.SetStateAction<string | number>>;
+  setTodo:React.Dispatch<React.SetStateAction<string | number>>; // this is a type of function 
 }
 
 const InputField:React.FC<Props>  = ({todo,setTodo}:Props) => {
