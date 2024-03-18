@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import InputField from "./components/InputField";
 import { Todo } from "./modal";
+// import TodoList from "./components/TodoList";
+import TodoList from "./components/TodoList";
 
 const App:React.FC =()=> {
 
@@ -27,7 +29,16 @@ const App:React.FC =()=> {
       <div className="App" >
         <span className="heading" >Taskify</span>
        <InputField todo={todo} setTodo={setTodo} handleSubmit={handleSubmit} />
-         
+       <TodoList todos={todos} setTodos={setTodos} />
+         {/* {todos.map((data)=>{
+          return(
+            <>
+              {data.id}
+              {data.todo}
+              {data.isDone}
+            </>
+          )
+         })} */}
       </div>
     </>
   );
