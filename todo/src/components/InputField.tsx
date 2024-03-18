@@ -3,7 +3,7 @@ import React from 'react'
 interface Props{
   todo:string;
   setTodo:React.Dispatch<React.SetStateAction<string | number>>; // this is a type of function 
-  handleSubmit:()=>void;
+  handleSubmit:(e:React.FormEvent)=>void;
 }
 
 const InputField:React.FC<Props>  = ({todo,setTodo,handleSubmit}:Props) => {
