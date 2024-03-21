@@ -6,6 +6,11 @@ interface Props {
 }
 
 const TodoList: React.FC<Props> = ({ todos, setTodos }: Props) => {
+
+// const handleDone=(id:number)=>{
+//   setTodos(todos.map((todo)=>todo.id === id?{...todo,isDone:true}:todo))
+// }
+
   return (
     <div >
      {todos.map((data)=>{
@@ -30,12 +35,13 @@ const TodoList: React.FC<Props> = ({ todos, setTodos }: Props) => {
           }}
         >
           <div>
-            <h5>{data.todo}</h5>
+            {/* <h5>{data?.isDone? "<delete>data.todo</delete>"}</h5> */}
+            {data?.isDone ? `<delete>{data.todos}</delete>`:data.todo}
           </div>
           <div style={{ display: "flex", gap: "5px"}}>
             <button style={{cursor:"pointer"}} >Edit</button>
             <button style={{cursor:"pointer"}} >Delete</button>
-            <button style={{cursor:"pointer"}} >Complete</button>
+            <button style={{cursor:"pointer"}} onClick={handleDone(data.id)} >Complete</button>
           </div>
         </div>
       </div>

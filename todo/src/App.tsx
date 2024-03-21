@@ -21,6 +21,13 @@ const App:React.FC =()=> {
     }
   }
 
+
+  const handleIsDone =(id:number) =>{
+    
+    setTodos(todos.map((todo)=>todo.id === id?{...todo,isDone:true}:todo))
+
+  }
+
   console.log(todos);
 
   return (
@@ -29,7 +36,7 @@ const App:React.FC =()=> {
       <div className="App" >
         <span className="heading" >Taskify</span>
        <InputField todo={todo} setTodo={setTodo} handleSubmit={handleSubmit} />
-       <TodoList todos={todos} setTodos={setTodos} />
+       <TodoList todos={todos} setTodos={setTodos} handleIsDone={handleIsDone(todos.id)} />
          {/* {todos.map((data)=>{
           return(
             <>
